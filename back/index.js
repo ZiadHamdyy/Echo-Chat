@@ -4,13 +4,14 @@ const app = express()
 const cors = require("cors")
 const server = require("http")
 const userRouter = require("./routes/user")
+const chatRouter = require("./routes/chat")
 const Server = server.createServer(app)
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors())
 require("dotenv").config()
 app.use("/api/users/", userRouter)
-
+app.use("/api/chats/", chatRouter)
 
 
 const port = 5000 || process.env.PORT
