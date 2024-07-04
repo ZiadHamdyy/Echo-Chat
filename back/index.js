@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const app = express()
 const cors = require("cors")
 const server = require("http")
+const { log } = require('console')
 const userRouter = require("./routes/user")
 const chatRouter = require("./routes/chat")
 const messageRouter = require("./routes/message")
@@ -17,7 +18,6 @@ app.use("/api/users/", userRouter)
 app.use("/api/chats/", chatRouter)
 app.use("/api/messages/", messageRouter)
 app.use("/api/groups/", groupRouter)
-
 
 
 const port = 5000 || process.env.PORT

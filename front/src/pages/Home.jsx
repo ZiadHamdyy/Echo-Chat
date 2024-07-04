@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       )}
       {showGroupMenu && currentGroup &&(
-        <div className="max-w-96 min-w-[350px] h-full inset-0 bg-black bg-opacity-50 animation-fadeIn">
+        <div className="max-w-96 min-w-[370px] h-full inset-0 bg-black bg-opacity-50 animation-fadeIn">
           <div className="animation-slideIn h-full">
           <GroupMenu onClose={() => setShowGroupMenu(false)} onRemoveClick={() => setShowRemoveMembers(true)} onLeaveClick={() => setShowLeaveMembers(true)}/>
           </div>

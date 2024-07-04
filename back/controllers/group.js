@@ -5,7 +5,7 @@ const cloudinary = require('../cloudinary/cloudinary.js')
 
 const createGroup = async (req, res) => {
   const { name, profileImage, members } = req.body;
-  if (!name || !profileImage || !members){
+  if (!name && !profileImage || !members){
     return res.status(400).json({ message: "Group name, profile image and members are required" });
   }
   if (!name)

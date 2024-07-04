@@ -37,7 +37,6 @@ export default function LogIN(/* { switchToSignup, switchToHome } */){
             <div className="text-gray-800 text-3xl font-bold	mt-7 mb-32">Log In</div>
             <div className="w-full h-2/6 flex flex-col flex-wrap justify-evenly">
               <Button onClick={switchToSignup}>Sign Up</Button>
-              <Button>Google</Button>
             </div>
           </div>
   

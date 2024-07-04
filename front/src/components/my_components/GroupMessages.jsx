@@ -32,7 +32,7 @@ export function GetGroupMessages({ onEditClick, onDeleteClick }) {
             <div className="bg-gray-200 rounded-full h-8 w-8 mt-2">
               <img className={msg?.profileImage ? "rounded-full h-8 w-8 object-cover":"w-8"} src={ msg?.profileImage|| usericon } alt="" />
             </div>
-            <div className="bg-gray-900 rounded-xl mb-2 ml-2 shadow-sm max-w-lg h-auto">
+            <div className="bg-gray-900 mb-2 ml-2 shadow-sm max-w-lg h-auto rounded-r-xl rounded-b-xl">
               <div className="flex items-center w-full h-8 justify-between" >
               <div className="px-2 py-1 text-sky-400">{msg.senderName}</div>
               {user._id === admin && <MessageDropdownMenuDemo onEditClick={ onEditClick } onDeleteClick={onDeleteClick}/>}
@@ -49,7 +49,7 @@ export function GetGroupMessages({ onEditClick, onDeleteClick }) {
             
             className="bg-gray-200 mx-6 my-2 text-gray-300 inline-flex justify-end h-auto w-5/5"
           >
-            <div className="bg-gray-900 rounded-xl mb-2 mr-2 shadow-sm max-w-lg h-auto" onClick={() => setCurrentMessage(msg)}>
+            <div className="bg-gray-900 mb-2 mr-2 shadow-sm max-w-lg h-auto rounded-l-xl rounded-b-xl" onClick={() => setCurrentMessage(msg)}>
             <div className="flex items-center w-full h-8 justify-between">
               <div className="px-2 py-1 text-sky-400">{user.name}</div>
               {<MessageDropdownMenuDemo onEditClick={ onEditClick } onDeleteClick={onDeleteClick}/>}

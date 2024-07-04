@@ -38,7 +38,7 @@ import { Button } from "./button";
   
     return (
       <>
-        <div className="m-auto w-full h-[523px] bg-gray-200 rounded-md flex flex-col">
+        <div className="m-auto w-[355px] h-[523px] bg-gray-200 rounded-md flex flex-col">
           <Input
             placeholder="Search for Users"
             value={input}
@@ -47,7 +47,7 @@ import { Button } from "./button";
           />
           <Table>
             <TableHeader>
-              <TableRow>
+              <TableRow >
                 <TableHead className="w-[80px]">Image</TableHead>
                 <TableHead></TableHead>
                 <TableHead>Name</TableHead>

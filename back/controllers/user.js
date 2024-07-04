@@ -107,8 +107,14 @@ const UpdateUser = async (req, res) => {
             user.name = name
         if(email)
             user.email = email
-        if(profileImage)
-            user.profileImage = profileImage
+        let uploadedImage = ""
+        if (profileImage){
+                uploadedImage = await cloudinary.uploader.upload(profileImage, {
+                upload_preset: "chatapp",
+                allowed_formats: ["jpg", "png", "jpeg", "svg", "ico", "jfif", "webp"],
+            });
+            user.profileImage = uploadedImage.url || ""
+        }
         await user.save()
         res.status(200).json(user)
     }catch(error){

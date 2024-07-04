@@ -69,7 +69,6 @@ export default function Signup(/* { switchToLogin } */) {
         </div>
         <div className="w-full h-2/6 flex flex-col flex-wrap justify-evenly">
           <Button onClick={switchToLogin}>Log In</Button>
-          <Button>Google</Button>
         </div>
       </div>
       <div className="bg-gray-200 w-8/12 flex flex-col flex-wrap justify-center items-center px-8 pb-8">

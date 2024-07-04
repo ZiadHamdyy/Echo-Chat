@@ -70,7 +70,7 @@ export function GroupTextArea() {
       </div>
       <Input
         className="w-5/6 h-11 text-lg text-sky-950"
-        placeholder="Type a message Group"
+        placeholder="Type a message"
         value={message}
         onChange={handleTypingGroup}
         onKeyPress={handleKeyPress}
